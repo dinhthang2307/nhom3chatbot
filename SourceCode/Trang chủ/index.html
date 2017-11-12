@@ -1,0 +1,199 @@
+<html>
+<head>
+    <title>
+        Chat Bot Theo Chủ đề
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../public/assests/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/assests/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/CSS/Style.css"/>
+
+
+</head>
+<body>
+<!--Header-->
+<header id="header">
+    <div id="logo">
+        <img style="width: 150px;" src="../public/Images/logo.png" alt="Logo">
+    </div>
+
+    <div class="btn-group" id="language">
+        <button id="vn_language" type="button" class="btn btn-default dropdown-toggle btn-circle"
+                data-toggle="dropdown">
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a id="my_language" href="#" data-toggle="modal" data-target="#" title="Ngôn ngữ Mỹ"
+                   class="btn btn-circle btn-primary"></a></li>
+            <li><a id="anh_language" href="#" data-toggle="modal" data-target="#" title="Ngôn ngữ Anh"
+                   class="btn btn-circle btn-primary"></a></li>
+        </ul>
+    </div>
+</header>
+<!--Body-->
+<div id="body">
+    <div class="chaomung">
+        <img width=90% src="../public/Images/welcome.png" alt="Xin chào">
+    </div>
+    <div class="gioithieu">
+        "Sự chuyên nghiệp, trưởng thành và kinh nghiệm sẽ
+        <br/>
+        giúp bạn trải nghiệm và thu được những thông tin bổ ích"
+    </div>
+    <div class="chude">
+        <div class="container" id="chude_container">
+            <div class="owl-controls clickable">
+                <div class="owl-buttons">
+                    <div class="owl-prev">
+                        <img width="15px" src="../public/Images/left%20arrow.png">
+                    </div>
+                    <div class="owl-next">
+                        <img width="15px" src="../public/Images/right%20arrow.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 chude_detail">
+                <button class="btn_chude" id="huongnghiep" data-toggle="modal" data-target="#chatHuongNghiep">
+                </button>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 chude_detail">
+                <button class="btn_chude" id="dovui" data-toggle="modal" data-target="#chatDoVui">
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 chude_detail">
+                <button class="btn_chude" id="amnhac" data-toggle="modal" data-target="#chatAmNhac">
+                </button>
+            </div>
+
+
+
+            <!-- Chat Hướng Nghiệp -->
+            <div class="modal fade" id="chatHuongNghiep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content huongnghiep">
+                        <div class="modal-header">
+                            <button style="color: #3dff00" type="button" class="close" data-dismiss="modal" aria-hidden="true">[ × ]</button>
+                            <h4 class="modal-title" id="chat_huongnghiep">
+                                <img width="75px" src="../public/Images/logo_huongnghiep.png">
+                                Tư vấn chọn nghề
+                            </h4>
+                        </div>
+                        <div class="modal-body chatarea_huongnghiep">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="msj-rta macro">
+                                <div class="text text-r">
+                                    <input type="text" class="mytext_huongnghiep" placeholder="Nhập nội dung tìm hiểu"/>
+                                </div>
+                                <div class="iconchat">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-circle iconchat_detail"
+                                            data-toggle="dropdown">
+                                    </button>
+                                </div>
+                                <div class="sendchat">
+                                    <button type="button" class="btn btn-success">
+                                        <img width="30px" height="37px" src="../public/Images/send-icon.png">
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Đố vui -->
+            <div class="modal fade" id="chatDoVui" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content dovui">
+                        <div class="modal-header">
+                            <button style="color: #ff00d2" type="button" class="close" data-dismiss="modal" aria-hidden="true">[ × ]</button>
+                            <h4 class="modal-title" id="chat_dovui">
+                                <img width="75px" src="../public/Images/logo_dovui.png">
+                                Câu hỏi đố vui
+                            </h4>
+                        </div>
+                        <div class="modal-body chatarea_dovui">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="msj-rta macro">
+                                <div class="text text-r">
+                                    <input type="text" class="mytext_dovui" placeholder="Nhập nội dung tìm hiểu"/>
+                                </div>
+                                <div class="iconchat">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-circle iconchat_detail"
+                                            data-toggle="dropdown">
+                                    </button>
+                                </div>
+                                <div class="sendchat">
+                                    <button type="button" class="btn btn-dovui">
+                                        <img width="30px" height="37px" src="../public/Images/send-icon.png">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Âm nhạc -->
+            <div class="modal fade" id="chatAmNhac" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content amnhac">
+                        <div class="modal-header">
+                            <button  style="color: #ffbe00" type="button" class="close" data-dismiss="modal" aria-hidden="true">[ × ]</button>
+                            <h4 class="modal-title" id="chat_amnhac">
+                                <img width="75px" src="../public/Images/logo_amnhac.png">
+                                Âm nhạc
+                            </h4>
+                        </div>
+                        <div class="modal-body chatarea_amnhac">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="msj-rta macro">
+                                <div class="text text-r">
+                                    <input type="text" class="mytext_amnhac" placeholder="Nhập nội dung tìm hiểu"/>
+                                </div>
+                                <div class="iconchat">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-circle iconchat_detail"
+                                            data-toggle="dropdown">
+                                    </button>
+                                </div>
+                                <div class="sendchat">
+                                    <button type="button" class="btn btn-warning">
+                                        <img width="30px" height="37px" src="../public/Images/send-icon.png">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Footer-->
+<footer id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="ft-bottom">
+        <div class="container ft">
+            <div class="row">
+                <div class="col-lg-12 col-xs-12 copyright">
+                    <p style="color: white">© Bản quyền thuộc về <b>BOT Team</b>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="../public/assests/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../public/assests/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
