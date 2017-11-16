@@ -6,6 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="../public/assests/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../public/assests/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/assests/emoji/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/assests/emoji/css/jquery.emoji.css">
     <link rel="stylesheet" type="text/css" href="../public/CSS/Style.css"/>
 
 
@@ -14,7 +16,7 @@
 <!--Header-->
 <header id="header">
     <div id="logo">
-        <img style="width: 150px;" src="../public/Images/logo.png" alt="Logo">
+        <img style="width: 150px;" src="../public/Images/image/logo.png" alt="Logo">
     </div>
 
     <div class="btn-group" id="language">
@@ -32,7 +34,7 @@
 <!--Body-->
 <div id="body">
     <div class="chaomung">
-        <img width=90% src="../public/Images/welcome.png" alt="Xin chào">
+        <img width=90% src="../public/Images/image/welcome.png" alt="Xin chào">
     </div>
     <div class="gioithieu">
         "Sự chuyên nghiệp, trưởng thành và kinh nghiệm sẽ
@@ -44,10 +46,10 @@
             <div class="owl-controls clickable">
                 <div class="owl-buttons">
                     <div class="owl-prev">
-                        <img width="15px" src="../public/Images/left%20arrow.png">
+                        <img width="15px" src="../public/Images/image/left%20arrow.png">
                     </div>
                     <div class="owl-next">
-                        <img width="15px" src="../public/Images/right%20arrow.png">
+                        <img width="15px" src="../public/Images/image/right%20arrow.png">
                     </div>
                 </div>
             </div>
@@ -66,15 +68,17 @@
             </div>
 
 
-
             <!-- Chat Hướng Nghiệp -->
-            <div class="modal fade" id="chatHuongNghiep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="chatHuongNghiep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content huongnghiep">
                         <div class="modal-header">
-                            <button style="color: #3dff00" type="button" class="close" data-dismiss="modal" aria-hidden="true">[ × ]</button>
+                            <button style="color: #3dff00" type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">[ × ]
+                            </button>
                             <h4 class="modal-title" id="chat_huongnghiep">
-                                <img width="75px" src="../public/Images/logo_huongnghiep.png">
+                                <img width="75px" src="../public/Images/image/logo_huongnghiep.png">
                                 Tư vấn chọn nghề
                             </h4>
                         </div>
@@ -83,16 +87,16 @@
                         <div class="modal-footer">
                             <div class="msj-rta macro">
                                 <div class="text text-r">
-                                    <input type="text" class="mytext_huongnghiep" placeholder="Nhập nội dung tìm hiểu"/>
+                                    <div id="mytext_huongnghiep" class="look-like-input textfield" contenteditable="true" ></div>
                                 </div>
-                                <div class="iconchat">
-                                    <button type="button" class="btn btn-default dropdown-toggle btn-circle iconchat_detail"
-                                            data-toggle="dropdown">
-                                    </button>
+                                <div class="iconchat" >
+                                    <a class="btn btn-circle iconchat_detail" id="iconchat_huongnghiep">
+                                    </a>
                                 </div>
+
                                 <div class="sendchat">
                                     <button type="button" class="btn btn-success">
-                                        <img width="30px" height="37px" src="../public/Images/send-icon.png">
+                                        <img width="30px" height="37px" src="../public/Images/image/send-icon.png">
                                     </button>
                                 </div>
 
@@ -104,13 +108,16 @@
             </div>
 
             <!-- Chat Đố vui -->
-            <div class="modal fade" id="chatDoVui" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="chatDoVui" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content dovui">
                         <div class="modal-header">
-                            <button style="color: #ff00d2" type="button" class="close" data-dismiss="modal" aria-hidden="true">[ × ]</button>
+                            <button style="color: #ff00d2" type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">[ × ]
+                            </button>
                             <h4 class="modal-title" id="chat_dovui">
-                                <img width="75px" src="../public/Images/logo_dovui.png">
+                                <img width="75px" src="../public/Images/image/logo_dovui.png">
                                 Câu hỏi đố vui
                             </h4>
                         </div>
@@ -119,16 +126,15 @@
                         <div class="modal-footer">
                             <div class="msj-rta macro">
                                 <div class="text text-r">
-                                    <input type="text" class="mytext_dovui" placeholder="Nhập nội dung tìm hiểu"/>
+                                    <div id="mytext_dovui" class="look-like-input textfield" contenteditable="true" ></div>
                                 </div>
                                 <div class="iconchat">
-                                    <button type="button" class="btn btn-default dropdown-toggle btn-circle iconchat_detail"
-                                            data-toggle="dropdown">
-                                    </button>
+                                    <a class="btn btn-circle iconchat_detail" id="iconchat_dovui">
+                                    </a>
                                 </div>
                                 <div class="sendchat">
                                     <button type="button" class="btn btn-dovui">
-                                        <img width="30px" height="37px" src="../public/Images/send-icon.png">
+                                        <img width="30px" height="37px" src="../public/Images/image/send-icon.png">
                                     </button>
                                 </div>
 
@@ -139,13 +145,16 @@
             </div>
 
             <!-- Chat Âm nhạc -->
-            <div class="modal fade" id="chatAmNhac" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="chatAmNhac" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content amnhac">
                         <div class="modal-header">
-                            <button  style="color: #ffbe00" type="button" class="close" data-dismiss="modal" aria-hidden="true">[ × ]</button>
+                            <button style="color: #ffbe00" type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">[ × ]
+                            </button>
                             <h4 class="modal-title" id="chat_amnhac">
-                                <img width="75px" src="../public/Images/logo_amnhac.png">
+                                <img width="75px" src="../public/Images/image/logo_amnhac.png">
                                 Âm nhạc
                             </h4>
                         </div>
@@ -154,16 +163,15 @@
                         <div class="modal-footer">
                             <div class="msj-rta macro">
                                 <div class="text text-r">
-                                    <input type="text" class="mytext_amnhac" placeholder="Nhập nội dung tìm hiểu"/>
+                                    <div id="mytext_amnhac" class="look-like-input textfield" contenteditable="true" ></div>
                                 </div>
                                 <div class="iconchat">
-                                    <button type="button" class="btn btn-default dropdown-toggle btn-circle iconchat_detail"
-                                            data-toggle="dropdown">
-                                    </button>
+                                    <a class="btn btn-circle iconchat_detail" id="iconchat_amnhac">
+                                    </a>
                                 </div>
                                 <div class="sendchat">
                                     <button type="button" class="btn btn-warning">
-                                        <img width="30px" height="37px" src="../public/Images/send-icon.png">
+                                        <img width="30px" height="37px" src="../public/Images/image/send-icon.png">
                                     </button>
                                 </div>
 
@@ -189,10 +197,14 @@
     </div>
 </footer>
 
-
 <script type="text/javascript" src="../public/assests/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="../public/assests/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="../public/assests/emoji/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="../public/assests/emoji/js/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="../public/assests/emoji/js/jquery.emoji.min.js"></script>
+<script type="text/javascript" src="../public/JS/huong_nghiep.js"></script>
+<script type="text/javascript" src="../public/JS/dovui.js"></script>
+<script type="text/javascript" src="../public/JS/amnhac.js"></script>
 
 </body>
 
