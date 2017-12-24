@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../public/assests/emoji/css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" type="text/css" href="../public/assests/emoji/css/jquery.emoji.css">
     <link rel="stylesheet" type="text/css" href="../public/CSS/Style.css"/>
-
+    <link rel="stylesheet" type="text/css" href="../public/CSS/Weather.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/CSS/Chat.css"/>
 
 </head>
 <body>
@@ -28,6 +29,35 @@
                    class="btn btn-circle btn-primary"></a></li>
             <li><a id="anh_language" href="#" data-toggle="modal" data-target="#" title="Ngôn ngữ Anh"
                    class="btn btn-circle btn-primary"></a></li>
+        </ul>
+    </div>
+    <div class="btn-group" id="weather">
+        <button type="button" class="btn  dropdown-toggle btn-weather" data-toggle="dropdown">
+            <div id="weather_current">
+                <img id="thoitiet1" width="42px">
+                TP Hồ Chí Minh
+            </div>
+        </button>
+        <ul class="dropdown-menu" role="menu" style="width: 100%;">
+            <div id="detail-weather">
+                <img id="thoitiet2" width="130px">
+
+                <div id="weather_value">
+                    <div id="weather_cloud" title="Mật độ mây">
+                        <img width="20px" src="../public/Images/image/cloud.png">
+                    </div>
+                    <div id="weather_temperature" title="Nhiệt độ hiện tại">
+                        <img width="20px" src="../public/Images/image/thermometer.png">
+
+                    </div>
+                    <div id="weather_wind" title="Sức gió">
+                        <img width="20px" src="../public/Images/image/wind.png">
+                    </div>
+
+                </div>
+
+
+            </div>
         </ul>
     </div>
 </header>
@@ -70,113 +100,34 @@
 
             <!-- Chat Hướng Nghiệp -->
             <div class="modal fade" id="chatHuongNghiep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 data-keyboard="false" data-backdrop="static"
                  aria-hidden="true">
+
                 <div class="modal-dialog modal-lg">
+
                     <div class="modal-content huongnghiep">
-                        <div class="modal-header">
-                            <button style="color: #3dff00" type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">[ × ]
-                            </button>
-                            <h4 class="modal-title" id="chat_huongnghiep">
-                                <img width="75px" src="../public/Images/image/logo_huongnghiep.png">
-                                Tư vấn chọn nghề
-                            </h4>
-                        </div>
-                        <div class="modal-body chatarea_huongnghiep">
-                        </div>
-                        <div class="modal-footer">
-                            <div class="msj-rta macro">
-                                <div class="text text-r">
-                                    <div id="mytext_huongnghiep" class="look-like-input textfield" contenteditable="true" ></div>
-                                </div>
-                                <div class="iconchat" >
-                                    <a class="btn btn-circle iconchat_detail" id="iconchat_huongnghiep">
-                                    </a>
-                                </div>
-
-                                <div class="sendchat">
-                                    <button type="button" class="btn btn-success">
-                                        <img width="30px" height="37px" src="../public/Images/image/send-icon.png">
-                                    </button>
-                                </div>
-
-                            </div>
-
+                        <div id="recast-webchat-div"></div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <!-- Chat Đố vui -->
             <div class="modal fade" id="chatDoVui" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 data-keyboard="false" data-backdrop="static"
                  aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content dovui">
-                        <div class="modal-header">
-                            <button style="color: #ff00d2" type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">[ × ]
-                            </button>
-                            <h4 class="modal-title" id="chat_dovui">
-                                <img width="75px" src="../public/Images/image/logo_dovui.png">
-                                Câu hỏi đố vui
-                            </h4>
-                        </div>
-                        <div class="modal-body chatarea_dovui">
-                        </div>
-                        <div class="modal-footer">
-                            <div class="msj-rta macro">
-                                <div class="text text-r">
-                                    <div id="mytext_dovui" class="look-like-input textfield" contenteditable="true" ></div>
-                                </div>
-                                <div class="iconchat">
-                                    <a class="btn btn-circle iconchat_detail" id="iconchat_dovui">
-                                    </a>
-                                </div>
-                                <div class="sendchat">
-                                    <button type="button" class="btn btn-dovui">
-                                        <img width="30px" height="37px" src="../public/Images/image/send-icon.png">
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Chat Âm nhạc -->
             <div class="modal fade" id="chatAmNhac" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                 aria-hidden="true">
+                 aria-hidden="true" data-keyboard="false" data-backdrop="static">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content amnhac">
-                        <div class="modal-header">
-                            <button style="color: #ffbe00" type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">[ × ]
-                            </button>
-                            <h4 class="modal-title" id="chat_amnhac">
-                                <img width="75px" src="../public/Images/image/logo_amnhac.png">
-                                Âm nhạc
-                            </h4>
-                        </div>
-                        <div class="modal-body chatarea_amnhac">
-                        </div>
-                        <div class="modal-footer">
-                            <div class="msj-rta macro">
-                                <div class="text text-r">
-                                    <div id="mytext_amnhac" class="look-like-input textfield" contenteditable="true" ></div>
-                                </div>
-                                <div class="iconchat">
-                                    <a class="btn btn-circle iconchat_detail" id="iconchat_amnhac">
-                                    </a>
-                                </div>
-                                <div class="sendchat">
-                                    <button type="button" class="btn btn-warning">
-                                        <img width="30px" height="37px" src="../public/Images/image/send-icon.png">
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -197,7 +148,16 @@
     </div>
 </footer>
 
+
+
+
 <script type="text/javascript" src="../public/assests/jquery-3.1.1.min.js"></script>
+<script type="text/javascript"
+        src="https://dl.dropbox.com/s/6qrrku3dg3hw05a/webchat.js"
+        channelId="e914b052-d51e-4494-8135-bfada6189c84"
+        token="3cd8f5de2160a389d7d44131d5a15736"
+        id="recast-webchat"></script>
+<script type="text/javascript" src="../public/JS/TextArea.js"></script>
 <script type="text/javascript" src="../public/assests/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../public/assests/emoji/js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="../public/assests/emoji/js/jquery.mCustomScrollbar.min.js"></script>
@@ -205,6 +165,9 @@
 <script type="text/javascript" src="../public/JS/huong_nghiep.js"></script>
 <script type="text/javascript" src="../public/JS/dovui.js"></script>
 <script type="text/javascript" src="../public/JS/amnhac.js"></script>
+<script type="text/javascript" src="../public/JS/weather.js"></script>
+<script type="text/javascript" src="../public/JS/index.js"></script>
+
 
 </body>
 

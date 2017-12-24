@@ -1,0 +1,39 @@
+div#weather {
+
+    right: 100px;
+    float: right;
+    position: fixed;
+    top: -5px;
+    cursor: hand;
+    margin-top: 8px;
+
+}
+.btn-weather
+{
+    padding: 0px 6px;
+    color: white;
+    background: url('../Images/image/weather-background.png') no-repeat;
+    border-color: #ccc;
+    border-radius: 15px;
+}
+#detail-weather
+{
+    background: url('../Images/image/weather-background.png') no-repeat;
+    width: 250px;
+    height: 133px;
+    margin-top: 2px;
+    margin-left: -44px;
+    border-radius: 16px;
+}
+.btn-weather:hover, .btn-weather:focus
+{
+    color: white;
+}
+#weather_value
+{
+    color:white;
+    float: right;
+    font-size: 20px;
+    margin-top: 14px;
+    margin-right: 14px;
+}
