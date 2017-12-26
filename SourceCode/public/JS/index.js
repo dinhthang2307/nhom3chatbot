@@ -29,9 +29,13 @@ setInterval(function(){
 
 $('#huongnghiep').on("click", function () {
     $("#recast-webchat-div").appendTo(".huongnghiep");
+    $(".Message.bot.text_huongnghiep").appendTo(".Live--message-container");
+
 });
 $('#dovui').on("click", function () {
     $("#recast-webchat-div").appendTo(".dovui");
+    $(".Message.bot.text_dovui").appendTo(".Live--message-container");
+
     setTimeout(function(){
         clearInterval(interval_obj);
     }, 10);
@@ -39,6 +43,7 @@ $('#dovui').on("click", function () {
 });
 $('#amnhac').on("click", function () {
     $("#recast-webchat-div").appendTo(".amnhac");
+    $(".Message.bot.text_amnhac").appendTo(".Live--message-container");
     setTimeout(function(){
         clearInterval(interval_obj);
     }, 10);
