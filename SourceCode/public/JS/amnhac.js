@@ -7,7 +7,7 @@ $("#mytext_amnhac").emoji({
     animation: 'slide',
     icons: [{
         name: "Emoji",
-        path: "../public/Images/icon_emoji/",
+        path: "/Images/icon_emoji/",
         maxNum: 51,
         file: ".png",
         placeholder: ":{alias}:",

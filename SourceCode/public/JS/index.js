@@ -3,18 +3,18 @@
  */
 var interval_obj = setInterval(function(){
     $('.dovui div.Header div.Header--title').text('Câu hỏi đố vui');
-    $(".dovui div.Header img.Header--logo").attr("src","../public/Images/image/logo_dovui.png");
+    $(".dovui div.Header img.Header--logo").attr("src","/Images/image/logo_dovui.png");
     $(".dovui div.Chat").css("border-color", "#ed057a");
-    $(".dovui div.Live").css("background-image", 'url(../public/Images/image/bgchat_dovui.jpg)');
+    $(".dovui div.Live").css("background-image", 'url(/Images/image/bgchat_dovui.jpg)');
     $(".dovui button.Input--send").css("background-color", '#ad5b78bd');
     $(".dovui button.Input--send").css("border-color", '#c77491');
 
 
 
     $('.amnhac div.Header div.Header--title').text('Âm nhạc');
-    $(".amnhac div.Header img.Header--logo").attr("src","../public/Images/image/logo_amnhac.png");
+    $(".amnhac div.Header img.Header--logo").attr("src","/Images/image/logo_amnhac.png");
     $(".amnhac div.Chat").css("border-color", "#784e1d");
-    $(".amnhac div.Live").css("background-image", 'url(../public/Images/image/bgchat_amnhac.jpg)');
+    $(".amnhac div.Live").css("background-image", 'url(/Images/image/bgchat_amnhac.jpg)');
     $(".amnhac button.Input--send").css("background-color", '#d58512');
     $(".amnhac button.Input--send").css("border-color", '#985f0d');
 }, 1);
