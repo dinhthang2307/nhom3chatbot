@@ -19,6 +19,7 @@ app.post('/',function (request,response) {
 });
 
 app.get('/', function (req,res) {
+    res.clearCookie('recast-conversation', { path:'/' });
     res.render('home');
 });
 
