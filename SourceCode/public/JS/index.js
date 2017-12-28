@@ -25,6 +25,10 @@ setInterval(function(){
     $(".dovui div.QuickReplies--button").css("background-color", '#fc8fe1');
     $(".dovui div.QuickReplies--button").css("border-color", '#ff0068');
     $(".dovui div.bot div.Text").css("background-color", 'rgb(127,252,129)');
+
+    $(".amnhac div.Text").css("background-color", '#ffff81');
+    $(".amnhac div.bot div.Text").css("background-color", '#b5f2ff');
+
 }, 1);
 
 $('#huongnghiep').on("click", function () {
