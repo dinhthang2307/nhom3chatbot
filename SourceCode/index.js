@@ -36,14 +36,14 @@ var replyMessage = function(message){
     if(fYoutube)
         return Youtube_XuLy(message);
 
-    if(text=='start' && !fTuVan){
+    if(text=='hướng nghiệp' && !fTuVan){
         fTuVan = true; fCauHoi = false; fYoutube = false;
         pointList=[]; sum=0; i=1;
     }
-    if(text=='start2' && !fCauHoi){
+        if(text=='đố vui' && !fCauHoi){
         fCauHoi = true; fTuVan = false; fYoutube = false;
     }
-    if(text == 'start3' && !fYoutube){
+    if(text == 'âm nhạc' && !fYoutube){
         fYoutube = true; fTuVan = false; fCauHoi = false;
     }
     return XuLy(message);
