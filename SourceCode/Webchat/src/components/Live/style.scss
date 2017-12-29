@@ -1,0 +1,22 @@
+.RecastApp .Live {
+  height: 448px;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://dl.dropboxusercontent.com/s/xvjp1b9hh1eabyc/bgchat_huongnghiep.jpg');
+  background-size: 100% 100%;
+  overflow-y: auto;
+
+  &--message-container {
+    flex-grow: 1;
+  }
+
+  &--slogan {
+    padding: 0.2rem;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
+    font-weight: bold;
+
+    text-align: center;
+    color: lightgrey;
+  }
+}

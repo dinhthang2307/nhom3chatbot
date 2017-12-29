@@ -1,0 +1,215 @@
+<html>
+<head>
+    <title>
+        Chat Bot Theo Chủ đề
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assests/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assests/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assests/emoji/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="/assests/emoji/css/jquery.emoji.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/Style.css"/>
+    <link rel="stylesheet" type="text/css" href="/CSS/Weather.css"/>
+    <link rel="stylesheet" type="text/css" href="/CSS/Chat.css"/>
+
+</head>
+<body>
+<!--Header-->
+<header id="header">
+    <div id="logo">
+        <img style="width: 150px;" src="/Images/image/logo.png" alt="Logo">
+    </div>
+
+    <div class="btn-group" id="language">
+        <button id="vn_language" type="button" class="btn btn-default dropdown-toggle btn-circle"
+                data-toggle="dropdown">
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a id="my_language" href="#" data-toggle="modal" data-target="#" title="Ngôn ngữ Mỹ"
+                   class="btn btn-circle btn-primary"></a></li>
+            <li><a id="anh_language" href="#" data-toggle="modal" data-target="#" title="Ngôn ngữ Anh"
+                   class="btn btn-circle btn-primary"></a></li>
+        </ul>
+    </div>
+    <div class="btn-group" id="weather">
+        <button type="button" class="btn  dropdown-toggle btn-weather" data-toggle="dropdown">
+            <div id="weather_current">
+                <img id="thoitiet1" width="42px">
+                TP Hồ Chí Minh
+            </div>
+        </button>
+        <ul class="dropdown-menu" role="menu" style="width: 100%;">
+            <div id="detail-weather">
+                <img id="thoitiet2" width="130px">
+
+                <div id="weather_value">
+                    <div id="weather_cloud" title="Mật độ mây">
+                        <img width="20px" src="/Images/image/cloud.png">
+                    </div>
+                    <div id="weather_temperature" title="Nhiệt độ hiện tại">
+                        <img width="20px" src="/Images/image/thermometer.png">
+
+                    </div>
+                    <div id="weather_wind" title="Sức gió">
+                        <img width="20px" src="/Images/image/wind.png">
+                    </div>
+
+                </div>
+
+
+            </div>
+        </ul>
+    </div>
+</header>
+<!--Body-->
+<div id="body">
+    <div class="chaomung">
+        <img width=90% src="/Images/image/welcome.png" alt="Xin chào">
+    </div>
+    <div class="gioithieu">
+        "Sự chuyên nghiệp, trưởng thành và kinh nghiệm sẽ
+        <br/>
+        giúp bạn trải nghiệm và thu được những thông tin bổ ích"
+    </div>
+    <div class="chude">
+        <div class="container" id="chude_container">
+            <div class="owl-controls clickable">
+                <div class="owl-buttons">
+                    <div class="owl-prev">
+                        <img width="15px" src="/Images/image/left%20arrow.png">
+                    </div>
+                    <div class="owl-next">
+                        <img width="15px" src="/Images/image/right%20arrow.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 chude_detail">
+                <button class="btn_chude" id="huongnghiep" data-toggle="modal" data-target="#chatHuongNghiep">
+                </button>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 chude_detail">
+                <button class="btn_chude" id="dovui" data-toggle="modal" data-target="#chatDoVui">
+                </button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 chude_detail">
+                <button class="btn_chude" id="amnhac" data-toggle="modal" data-target="#chatAmNhac">
+                </button>
+            </div>
+
+
+            <!-- Chat Hướng Nghiệp -->
+            <div class="modal fade" id="chatHuongNghiep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 data-keyboard="false" data-backdrop="static"
+                 aria-hidden="true">
+
+                <div class="modal-dialog modal-lg">
+
+                    <div class="modal-content huongnghiep">
+                        <div id="recast-webchat-div">
+
+                        </div>
+                        <div class="Message bot text_huongnghiep" >
+                            <img class="Message--logo visible"
+                                 src="https://www.misskatecuttables.com/uploads/shopping_cart/9750/large_love-robot.png">
+                            <div class="Text" style="color: rgb(0, 0, 0); background-color: rgb(255, 235, 144)">
+                                Chào mừng bạn tới chủ đề
+                                <br/>
+                                "Tư vấn hướng nghiệp"
+                                <br/>
+                                Hãy nhấn "hướng nghiệp" để bắt đầu chủ đề
+                                <br/>
+                                Chúc bạn tìm được công việc cho tương lai <3 <3
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Chat Đố vui -->
+        <div class="modal fade" id="chatDoVui" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             data-keyboard="false" data-backdrop="static"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content dovui">
+                    <div class="Message bot text_dovui" >
+                        <img class="Message--logo visible"
+                             src="https://www.misskatecuttables.com/uploads/shopping_cart/9750/large_love-robot.png">
+                        <div class="Text" style="color: rgb(0, 0, 0); background-color: rgb(127, 252, 129)">
+                            Chào mừng bạn tới chủ đề
+                            <br/>
+                            "Câu hỏi đố vui"
+                            <br/>
+                            Hãy nhấn "đố vui" để bắt đầu chủ đề
+                            <br/>
+                            Chúc bạn vui vẻ khi tham gia trò chơi <3 <3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Âm nhạc -->
+        <div class="modal fade" id="chatAmNhac" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content amnhac">
+                    <div class="Message bot text_amnhac" >
+                        <img class="Message--logo visible"
+                             src="https://www.misskatecuttables.com/uploads/shopping_cart/9750/large_love-robot.png">
+                        <div class="Text" style="color: rgb(0, 0, 0); background-color: rgb(127, 252, 129);">
+                            Chào mừng bạn tới chủ đề
+                            <br/>
+                            "Âm nhạc"
+                            <br/>
+                            Hãy nhấn "âm nhạc" để bắt đầu chủ đề
+                            <br/>
+                            Chúc bạn thoải mái khi chọn được nhạc phù hợp <3 <3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--Footer-->
+<footer id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="ft-bottom">
+        <div class="container ft">
+            <div class="row">
+                <div class="col-lg-12 col-xs-12 copyright">
+                    <p style="color: white">© Bản quyền thuộc về <b>BOT Team</b>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="/assests/jquery-3.1.1.min.js"></script>
+<script type="text/javascript"
+        src="https://dl.dropbox.com/s/b3bdm98vnvxrzyx/webchat.js"
+        channelId="ee35d4c6-aa45-4089-bc0f-8a90147717eb"
+        token="71c575afbbadd31d8014f995df0d6ea0"
+        id="recast-webchat"></script>
+<script type="text/javascript" src="/JS/TextArea.js"></script>
+<script type="text/javascript" src="/assests/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assests/emoji/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/assests/emoji/js/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="/assests/emoji/js/jquery.emoji.min.js"></script>
+<script type="text/javascript" src="/JS/huong_nghiep.js"></script>
+<script type="text/javascript" src="/JS/dovui.js"></script>
+<script type="text/javascript" src="/JS/amnhac.js"></script>
+<script type="text/javascript" src="/JS/weather.js"></script>
+<script type="text/javascript" src="/JS/index.js"></script>
+<script type="text/javascript" src="/JS/sp-custom.js"></script>
+
+</body>
+
+</html>
