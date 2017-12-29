@@ -236,6 +236,8 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacBuon.length));
             card.css('background-color', '#ffe854');
+            card.css('border', 'none');
+            // card.css('width', '267');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -253,6 +255,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacVui.length));
             card.css('background-color', '#90ff54');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -269,6 +272,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacHocTap.length));
             card.css('background-color', '#91e7ff');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -286,6 +290,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacYeuDoi.length));
             card.css('background-color', '#ff919c');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -300,6 +305,7 @@ function checkRealTimeTitle(){
         } else if(title.text() === '_SON_TUNG_MTP'){
 
             var randNum = Math.floor((Math.random() * dsNhacSonTung.length));
+            card.css('border', 'none');
             card.css('background-color', '#d1ff91');
             img.css('width', '270');
             img.css('height', '150');
@@ -318,6 +324,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacDucPhuc.length));
             card.css('background-color', 'snow');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -333,6 +340,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacBaoAnh.length));
             card.css('background-color', '#ffff91');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -348,6 +356,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacQuocTe.length));
             card.css('background-color', '#91beff');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -363,6 +372,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacRap.length));
             card.css('background-color', '#b7b7b7');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -378,6 +388,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacVeMe.length));
             card.css('background-color', '#ffcf4e');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
@@ -394,6 +405,7 @@ function checkRealTimeTitle(){
 
             var randNum = Math.floor((Math.random() * dsNhacTruTinh.length));
             card.css('background-color', '#ed66ff');
+            card.css('border', 'none');
             img.css('width', '270');
             img.css('height', '150');
             img.css('cursor', 'pointer');
