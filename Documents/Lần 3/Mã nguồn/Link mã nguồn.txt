@@ -1,8 +1,0 @@
-﻿Link source code 75%:
-https://www.dropbox.com/s/u6z7qcvkeljmr67/Nh%C3%B3m%203.rar?dl=0
-
-Link và tài khoản truy cập vào hệ thống quản lý lỗi (điểm tính chung với báo cáo kết quả kiểm thử).
-- Link và tài khoản truy cập hệ thống source control để tải mã nguồn với 75% tính năng đã được hoàn thành (sản phẩm mã nguồn hệ số 3)
-- Hướng dẫn thiết lập môi trường, cài đặt công cụ và biên dịch mã nguồn (tính chung điểm với sản phẩm mã nguồn)
-- Danh sách các tính năng đã hoàn thành (tính chung điểm với sản phẩm mã nguồn)
-- Link video trên YouTue demo 75% tính năng đã được hoàn thành:https://youtu.be/Eru1z78Wv2Y
