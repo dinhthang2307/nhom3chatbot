@@ -19,6 +19,8 @@ app.post('/',function (request,response) {
 });
 
 app.get('/', function (req,res) {
+    pointList=[];sum=0;i=1;
+    fTuVan=false, fCauHoi=false, fYoutube=false;
     res.clearCookie('recast-conversation', { path:'/' });
     res.render('home');
 });
@@ -41,7 +43,7 @@ var replyMessage = function(message){
         fTuVan = true; fCauHoi = false; fYoutube = false;
         pointList=[]; sum=0; i=1;
     }
-        if(text=='đố vui' && !fCauHoi){
+    if(text=='đố vui' && !fCauHoi){
         fCauHoi = true; fTuVan = false; fYoutube = false;
     }
     if(text == 'âm nhạc' && !fYoutube){
@@ -60,7 +62,7 @@ function XuLy(message) {
     var build = new recastai.build(process.env.REQUEST_TOKEN, 'en');
     return build.dialog({ type: 'text', content:message.content }, { conversationId: message.conversationId })
         .then(function(res) {
-            message.addReply(res.messages[0]);
+            message.addReply(res.messages);
             return message.reply().then(function(p) {p.body})
         });
 }
@@ -79,9 +81,7 @@ function TuVan_XuLy(message) {
             pointList.sort(compare);
             return build.dialog({ type: 'text', content:pointList[5].vl }, { conversationId: message.conversationId })
                 .then(function(res) {
-                    message.addReply(res.messages[0]);
-                    message.addReply(res.messages[1]);
-                    message.addReply(res.messages[2]);
+                    message.addReply(res.messages);
                     return message.reply().then(function(p) {p.body});
                 })
         }
@@ -90,11 +90,29 @@ function TuVan_XuLy(message) {
     }
     return build.dialog({ type: 'text', content:i }, { conversationId: message.conversationId })
         .then(function(res) {
-            message.addReply(res.messages[0]);
+            message.addReply(res.messages);
             return message.reply().then(function(p) {p.body});
         })
 }
+function Youtube_XuLy(message) {
+    var build = new recastai.build(process.env.REQUEST_TOKEN, 'en');
+    return build.dialog({ type: 'text', content:message.content }, { conversationId: message.conversationId })
+        .then(function(res) {
+            console.log(res);
+            message.addReply(res.messages);
+            return message.reply().then(function(p) {p.body})
+        });
+}
 
+function CauHoi_XuLy(message) {
+    var build = new recastai.build(process.env.REQUEST_TOKEN, 'en');
+    return build.dialog({ type: 'text', content:message.content }, { conversationId: message.conversationId })
+        .then(function(res) {
+            console.log(res);
+            message.addReply(res.messages);
+            return message.reply().then(function(p) {p.body})
+        });
+}
 function compare(a,b) {
     if (a.sum < b.sum)
         return -1;
